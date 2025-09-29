@@ -1,10 +1,10 @@
 # simpleJavaVersionSwitcher
 This is a small, lightweight Python/Tkinter app to help you switch between installed Java versions on Windows.  
-It will update your `JAVA_HOME` system variable with admin privileges.
+It will update your `path` system variable with admin privileges.
 
 ## Features
 - Fetch the installed java versions
-- Updates `JAVA_HOME` user/system-wide (or both)
+- Updates `path` user/system-wide (or both)
 - Tkinter GUI—super simple and lightweight.
 
 ## Note
