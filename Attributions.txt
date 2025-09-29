@@ -1,0 +1,4 @@
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+## Attributions
+Switch icons created by [Freepik - Flaticon](https://www.flaticon.com/free-icons/switch)
