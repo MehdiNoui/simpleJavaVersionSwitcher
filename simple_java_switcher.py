@@ -5,6 +5,10 @@ from modules.fetcher import list_java_versions
 from modules.clicker import clicker_logic
 from modules.label_refresh import refresh_current_java
 
+# Request admin privileges if needed
+from utils.admin import request_admin_optional
+request_admin_optional()
+
 # Initialize main window
 root = tk.Tk()
 root.title("Simple Java switcher")
