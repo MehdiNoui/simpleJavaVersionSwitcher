@@ -8,7 +8,7 @@ from modules.label_refresh import refresh_current_java
 # Initialize main window
 root = tk.Tk()
 root.title("Simple Java switcher")
-root.geometry("600x400")
+root.geometry("600x450")
 root.resizable(False, False)
 
 # Set application icon
@@ -19,16 +19,26 @@ else:
 root.iconbitmap(icon_path)
 
 # Select Label
-label = tk.Label(root, text="Welcome. Select the Java version and environment type to switch.")
+label = tk.Label(
+    root,
+    text="Simple Java Switcher\nSelect the Java version and environment type to switch.",
+    font=("Microsoft YaHei", 12), 
+    justify="center")
 label.pack(pady=10)
 
 # Version Label
-current_java_label = tk.Label(root, text="", fg="blue")
+frame_cjl = tk.LabelFrame(root, text="Current Java Paths", padx=10, pady=5)
+frame_cjl.pack(fill="x", padx=15, pady=10)
+
+current_java_label = tk.Label(frame_cjl, text="", fg="blue")
 current_java_label.pack(pady=5)
-refresh_current_java(current_java_label)
+refresh_current_java(current_java_label) # Refresh
 
 # Error catcher Label
-error_label = tk.Label(root, text="")
+frame_el = tk.LabelFrame(root, text="Status", padx=10, pady=5)
+frame_el.pack(fill="x", padx=15, pady=10)
+
+error_label = tk.Label(frame_el, text="Waiting for action...", fg="blue")
 error_label.pack(pady=5)
 try: 
     versions = list_java_versions()
@@ -64,5 +74,4 @@ def on_select():
 bt = tk.Button(root,text="Select", command=on_select)
 bt.pack(pady=10)
 
-current_value = vrs_CB.get()
 root.mainloop()
