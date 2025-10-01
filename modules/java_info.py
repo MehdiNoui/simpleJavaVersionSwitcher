@@ -1,4 +1,3 @@
-import os
 import subprocess
 
 def get_user_java_path():
